@@ -1,45 +1,141 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Вітковський Іван Сергійович, IM-44, лабораторна робота, HTML5, тайський бокс, футбол">
-    <meta name="description" content="Особиста сторінка студента Вітковського Івана Сергійовича, група ІМ-44. Лабораторна робота №1 з HTML-5.">
-    <title>Вітковський Іван Сергійович, ІМ-44</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вітковський Іван Сергійович, ІМ-44 — Лабораторні роботи</title>
+<style>
+    :root {
+        --bg: #f4f6f2;
+        --card: #ffffff;
+        --accent: #068f8f;
+        --accent-dark: #046b6b;
+        --text: #222222;
+        --muted: #6b6b6b;
+        --border: #e2e6e0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    header h1 {
+        margin: 0 0 8px 0;
+        font-size: 28px;
+    }
+
+    header p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+    }
+
+    main {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .lab-group {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px 26px;
+        margin-bottom: 22px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .lab-group h2 {
+        margin: 0 0 6px 0;
+        font-size: 19px;
+        color: var(--accent-dark);
+    }
+
+    .lab-group p.desc {
+        margin: 0 0 16px 0;
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .links a {
+        display: inline-block;
+        padding: 10px 18px;
+        background: var(--accent);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: background 0.2s ease;
+    }
+
+    .links a:hover {
+        background: var(--accent-dark);
+    }
+
+    footer {
+        margin-top: 30px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+    }
+
+    footer a {
+        color: var(--accent-dark);
+    }
+</style>
 </head>
 <body>
 
-<h2>Вітковський Іван Сергійович</h2>
+    <header>
+        <h1>Вітковський Іван Сергійович</h1>
+        <p>Група ІМ-44 · Лабораторні роботи з веб-технологій</p>
+    </header>
 
-<p>Дата та місце народження: 17 листопада 2006 року, м Шахтарське, Дніпропетровська область.</p>
+    <main>
 
-<p>Освіта: Школа №2.</p>
+        <section class="lab-group">
+            <h2>Лабораторна робота №1</h2>
+            <p class="desc">Мова гіпертекстової розмітки сайту HTML-5</p>
+            <div class="links">
+                <a href="lab1/lab1.html">Відкрити сторінку</a>
+            </div>
+        </section>
 
-<p>Хобі:</p>
-<ul>
-    <li>Тайський бокс</li>
-    <li>Футбол</li>
-    <li>Комп'ютерні ігри</li>
-</ul>
+        <section class="lab-group">
+            <h2>Лабораторна робота №2</h2>
+            <p class="desc">Таблиці в HTML-5. Створення зображень засобами трансформацій в CSS-3 (Варіант 6)</p>
+            <div class="links">
+                <a href="lab2/task1.html">Завдання 1 — таблиця</a>
+                <a href="lab2/task2.html">Завдання 2 — зображення</a>
+            </div>
+        </section>
 
-<p>Улюблені фільми:</p>
-<ol>
-    <li>"Бійцівський клуб"</li>
-    <li>"Комерсант"</li>
-    <li>"Острів проклятих"</li>
-</ol>
+    </main>
 
-<p>
-    Київ — столиця та найбільше місто України, головний політичний, соціально-економічний,
-    освітній, культурний та науковий центр країни. Розташований у середній течії річки Дніпро,
-    яка ділить місто на лівобережну та правобережну частини. Київ є одним з найдавніших міст
-    Європи, засноване понад 1500 років тому, і має статус міста зі спеціальним статусом.
-    Серед відомих визначних пам'яток міста — Софійський собор, Києво-Печерська лавра,
-    Майдан Незалежності та Андріївський узвіз.
-</p>
-
-<a href="https://kyivcity.gov.ua/">
-    <img src="lab1/image.jpg" alt="Фото міста Київ" width="600">
-</a>
+    <footer>
+        Репозиторій: <a href="https://github.com/vitkovskiiy/front-end-course">github.com/vitkovskiiy/front-end-course</a>
+    </footer>
 
 </body>
 </html>

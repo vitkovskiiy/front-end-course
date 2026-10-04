@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f4efd8"/><stop offset="1" stop-color="#e7e2bd"/></linearGradient><linearGradient id="fruit" x2="0" y2="1"><stop stop-color="#ffe77a"/><stop offset="1" stop-color="#e8ad32"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h320v210H0z"/><circle cx="55" cy="46" r="26" fill="#fff" opacity=".25"/>
+  <ellipse cx="160" cy="168" rx="102" ry="12" fill="#604f28" opacity=".13"/>
+  <path fill="url(#fruit)" stroke="#c89128" stroke-width="4" d="M71 54q35 98 150 103 29 1 42-14-26 52-73 38Q94 160 55 72Z"/>
+  <path fill="#6e5126" d="M53 64q-9-8-4-17l15 8 8-7 8 9-11 12Z"/><path fill="#6e5126" d="M246 143q13 3 17-8l-11-10-9 3-6 11Z"/>
+  <path fill="#fff5b1" opacity=".62" d="M82 72q39 67 112 74" stroke="#fff5b1" stroke-width="5" fill-opacity="0" stroke-linecap="round"/>
+</svg>

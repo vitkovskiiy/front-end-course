@@ -1,10 +1,9 @@
 const downloadButton = document.getElementById("download-button");
 const requestStatus = document.getElementById("request-status");
 const usersContainer = document.getElementById("users");
-const apiUrl = "https://randomuser.me/api/?results=5";
+const apiUrl = "https://randomuser.me/api/?results=5"; //або можна одразу передати але краще так не робити
 
 function createUserCard(user) {
-    // Поля варіанта 6: picture, name, city, country та postcode.
     const card = document.createElement("article");
     card.className = "user-card";
 
@@ -50,15 +49,15 @@ downloadButton.addEventListener("click", () => {
     requestStatus.textContent = "Завантаження...";
     showMessage("Отримуємо дані користувачів...");
 
-    // fetch() надсилає GET-запит і повертає Promise з об'єктом Response.
+    // fetch() надсилає гет і повертає промис з об'єктом Response.
     fetch(apiUrl)
         .then((response) => {
-            // fetch не відхиляє Promise автоматично для HTTP-помилок, тому перевіряємо response.ok.
+            // fetch не відхиляє промис автоматично для HTTP-помилок, тому перевіряємо response.ok.
             if (!response.ok) {
                 throw new Error(`Помилка HTTP: ${response.status}`);
             }
 
-            // response.json() читає тіло відповіді, розбирає JSON і також повертає Promise.
+            // response.json() читає тіло відповіді, розбирає JSON і також повертає промис.
             return response.json();
         })
         .then((data) => {

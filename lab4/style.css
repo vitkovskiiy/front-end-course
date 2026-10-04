@@ -1,0 +1,55 @@
+body {
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+main {
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+.links a {
+    color: #075b9a;
+}
+
+#element-7,
+.element-8 {
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.image-section {
+    margin-top: 24px;
+}
+
+.image-link {
+    display: inline-block;
+}
+
+#city-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.image-controls button {
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+}

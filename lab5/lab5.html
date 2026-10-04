@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №5: події та регулярні вирази.">
+    <title>Лабораторна робота №5 — Вітковський І.С., ІМ-44, Варіант 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <a class="back-link" href="../index.html">До списку лабораторних</a>
+        <h1>Лабораторна робота №5</h1>
+        <p>Тема: «Події. Регулярні вирази»</p>
+        <p>Вітковський Іван Сергійович · ІМ-44 · Варіант 6</p>
+    </header>
+
+    <main>
+        <section class="card" aria-labelledby="form-title">
+            <h2 id="form-title">Завдання 1. Перевірка даних</h2>
+            <p class="hint">Заповніть усі поля за вказаними форматами.</p>
+            <form id="student-form" novalidate>
+                <div class="field" data-field="name">
+                    <label for="full-name">ПІБ</label>
+                    <input id="full-name" name="name" autocomplete="name" placeholder="Вітковський І.С." aria-describedby="name-format name-error">
+                    <small id="name-format">Прізвище та ініціали: Текст Т.Т.</small>
+                    <small class="error" id="name-error"></small>
+                </div>
+                <div class="field" data-field="birthdate">
+                    <label for="birthdate">Дата народження</label>
+                    <input id="birthdate" name="birthdate" placeholder="ДД.ММ.РРРР" inputmode="numeric" aria-describedby="birthdate-format birthdate-error">
+                    <small id="birthdate-format">Формат: ЧЧ.ЧЧ.ЧЧЧЧ</small>
+                    <small class="error" id="birthdate-error"></small>
+                </div>
+                <div class="field" data-field="address">
+                    <label for="address">Адреса</label>
+                    <input id="address" name="address" placeholder="м. 123456" aria-describedby="address-format address-error">
+                    <small id="address-format">Формат: м. ЧЧЧЧЧЧ</small>
+                    <small class="error" id="address-error"></small>
+                </div>
+                <div class="field" data-field="email">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="text" autocomplete="email" placeholder="student@mail.com" aria-describedby="email-format email-error">
+                    <small id="email-format">Текст@Текст.com</small>
+                    <small class="error" id="email-error"></small>
+                </div>
+                <div class="field" data-field="telegram">
+                    <label for="telegram">Telegram</label>
+                    <input id="telegram" name="telegram" placeholder="@i_vanko" aria-describedby="telegram-format telegram-error">
+                    <small id="telegram-format">Формат: @T_TTTTT</small>
+                    <small class="error" id="telegram-error"></small>
+                </div>
+                <button class="primary-button" type="submit">Перевірити та показати дані</button>
+                <p id="form-status" class="status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="card" aria-labelledby="table-title">
+            <h2 id="table-title">Завдання 2. Події таблиці</h2>
+            <p class="hint">Клітинка №6: наведіть для випадкового кольору, клацніть для кольору з палітри, двічі клацніть для прямокутника 3×3.</p>
+            <div class="table-tools">
+                <label for="cell-color">Колір для кліку:</label>
+                <input id="cell-color" type="color" value="#ed9b40" aria-label="Виберіть колір клітинки">
+                <span id="table-status" class="status" role="status" aria-live="polite">Активна клітинка: №6</span>
+            </div>
+            <div class="table-scroll">
+                <table id="number-table" aria-label="Таблиця 6 на 6, клітинки від 1 до 36">
+                    <tbody></tbody>
+                </table>
+            </div>
+            <p class="hint small-hint">Подвійний клік зафарбовує прямокутник 3×3, який починається від клітинки №6 і розширюється вниз та вліво.</p>
+        </section>
+    </main>
+
+    <footer>Лабораторна робота з основ Front-end технологій</footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #202a35;
+    background: #f2f4f6;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.top-bar {
+    background: #17212b;
+    color: #f4f7fa;
+    box-shadow: 0 3px 12px rgb(10 20 30 / 18%);
+}
+
+.header-content {
+    display: flex;
+    width: min(100% - 40px, 1180px);
+    min-height: 168px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 25px 0;
+}
+
+.back-link {
+    color: #b4c6d8;
+    font-size: 0.88rem;
+}
+
+.heading h1 {
+    margin: 10px 0 4px;
+    font-size: clamp(1.55rem, 4vw, 2.1rem);
+}
+
+.heading p {
+    margin: 0;
+    color: #bac6d1;
+}
+
+.download-area {
+    min-width: 240px;
+    text-align: center;
+}
+
+#download-button {
+    min-width: 150px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 6px;
+    background: #2b9b74;
+    color: #fff;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+#download-button:hover:not(:disabled) {
+    background: #238260;
+    transform: translateY(-1px);
+}
+
+#download-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+#request-status {
+    min-height: 1.25em;
+    margin: 9px 0 0;
+    color: #c9d3dc;
+    font-size: 0.9rem;
+}
+
+#request-status.success {
+    color: #75e0ae;
+    font-weight: 700;
+}
+
+#request-status.error {
+    color: #ffaaa4;
+}
+
+main {
+    width: min(100% - 40px, 1180px);
+    margin: 0 auto;
+}
+
+.student-info {
+    margin: 24px 0 18px;
+    color: #607080;
+    text-align: center;
+}
+
+.student-info span {
+    padding: 0 4px;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.user-card {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #202b36;
+    box-shadow: 0 5px 16px rgb(28 42 55 / 14%);
+    color: #f3f6f8;
+}
+
+.user-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #d7dee4;
+}
+
+.user-details {
+    min-height: 150px;
+    padding: 15px 14px 17px;
+}
+
+.user-details h2 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.user-details p {
+    margin: 6px 0;
+    color: #d0d8df;
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+}
+
+.user-details strong {
+    color: #fff;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 38px 20px;
+    border: 1px dashed #c1cbd4;
+    border-radius: 10px;
+    color: #697887;
+    text-align: center;
+}
+
+footer {
+    padding: 38px 20px 24px;
+    color: #71808e;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1000px) {
+    .users-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .header-content {
+        width: min(100% - 32px, 1180px);
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .download-area {
+        width: 100%;
+        text-align: left;
+    }
+
+    #request-status {
+        margin-left: 2px;
+    }
+
+    main {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .users-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .user-details {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-photo {
+        aspect-ratio: 1.25 / 1;
+    }
+}
